@@ -4,7 +4,7 @@ jokenpo = ['rock', 'paper', 'scissors']
 random.shuffle(jokenpo)
 
 
-def select():
+def main():
     print('\nSelect: "Rock, Paper or Scissors"')
     player = input('> ').lower()
     enemy = random.choice(jokenpo)
@@ -29,7 +29,7 @@ def select():
         try_again()
 
     else:
-        select()
+        main()
 
 
 def try_again():
@@ -39,11 +39,11 @@ def try_again():
         a = input("\nDo you want to keep playing y/n ? ")
 
     if a.lower() == ("y"):
-        select()
+        main()
 
     else:
         print("\nGame Over!!!")
 
 
 if __name__ == "__main__":
-    select()
+    main()
